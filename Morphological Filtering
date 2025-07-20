@@ -1,1 +1,28 @@
 
+prePath = 'Path of file';
+
+imgPre = imread(prePath);
+
+if size(imgPre, 3) == 3
+    grayPre = rgb2gray(imgPre);
+else
+    grayPre = imgPre;
+end
+
+se = strel('disk', 5);
+
+closed = imclose(grayPre, se);
+
+closedDiff = imabsdiff(grayPre, closed);
+
+closedDiff = im2uint8(closedDiff);
+f = figure('Visible', 'off');
+imshow(closedDiff, []);
+axis off;
+set(gca, 'Position', [0 0 1 1]);  % Remove margins and axes
+
+% Export as high-res PNG at 600 DPI
+exportgraphics(gca, ...
+    'D:\Semester 2\Analysis of High-Resolution Remote Sensing Imagery\Final Project\AOI\Pre_Closed_Diff_600dpi.png', ...
+    'Resolution', 600);
+
