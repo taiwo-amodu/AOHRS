@@ -19,7 +19,7 @@ closedDiff = im2uint8(closedDiff);
 f = figure('Visible', 'off');
 imshow(closedDiff, []);
 axis off;
-set(gca, 'Position', [0 0 1 1]);  % Remove margins and axes
+set(gca, 'Position', [0 0 1 1]); 
 
 % Export as high-res PNG at 600 DPI
 exportgraphics(gca, ...
