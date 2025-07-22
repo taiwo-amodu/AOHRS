@@ -1,4 +1,4 @@
-# AOHRS
+# AOHRSI
 ## Object-Based Image Analysis (OBIA) for Beirut Explosion Mapping
 ### Overview
 This project applies Object-Based Image Analysis (OBIA) using QGIS and Orfeo Toolbox (OTB) to map and analyze the damage caused by the Beirut explosion. The goal is to assess changes in land cover—particularly buildings—by comparing pre- and post-event satellite imagery from the Maxar Open Data Portal. The process involves segmentation, classification, and accuracy assessment to quantify the affected area and validate the results.
@@ -15,3 +15,8 @@ To quantify the affected area, the $area expression was used in QGIS’s Field C
 
 ### Accuracy Assessment
 For classification accuracy, 100 random validation points were generated across the study area. These points were manually checked against the satellite imagery and used to produce a confusion matrix. The overall accuracy for the pre-explosion classification was 82%, and the accuracy for the post-explosion classification was 76%. These values were computed by comparing the predicted and reference classes at each validation point.
+
+
+### JAMES EDUARD DIZON - 5653373
+### MUHAMMAD SANAN  - 565417
+### TAIWO AMODU - 565364
